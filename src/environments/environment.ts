@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  endpoint: 'https://test.oxirium.com:8081/cloud/staging/services/tracking/api'
 };
 
 /*

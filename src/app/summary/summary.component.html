@@ -1,0 +1,124 @@
+<div class="summary">
+  <h2>Company Information</h2>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 summary-table">
+    
+      <ng-container matColumnDef="id">
+        <th mat-header-cell class="w-header" *matHeaderCellDef> Id </th>
+        <td mat-cell class="w-cell" *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="ownerCompanyName">
+        <th mat-header-cell class="w-header" *matHeaderCellDef> Owner Company Name </th>
+        <td mat-cell class="w-cell" *matCellDef="let element"> {{element.ownerCompanyName}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="carrierCompanyName">
+        <th mat-header-cell class="w-header" *matHeaderCellDef> Carrier Company Name </th>
+        <td mat-cell class="w-cell" *matCellDef="let element"> {{element.carrierCompanyName}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="carrierCompanyId">
+        <th mat-header-cell class="w-header" *matHeaderCellDef> Carrier Company Id </th>
+        <td mat-cell class="w-cell" *matCellDef="let element"> {{element.carrierCompanyId}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="activityStatus">
+        <th mat-header-cell class="w-header" *matHeaderCellDef> Activity Status </th>
+        <td mat-cell class="w-cell" *matCellDef="let element"> {{element.activityStatus}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="status">
+        <th mat-header-cell class="w-header" *matHeaderCellDef> Status </th>
+        <td mat-cell class="w-cell" *matCellDef="let element"> {{element.status}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="driverFullName">
+        <th mat-header-cell class="w-header" *matHeaderCellDef> Driver Full Name </th>
+        <td mat-cell class="w-cell" *matCellDef="let element"> {{element.driverFullName}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="driverId">
+        <th mat-header-cell class="w-header" *matHeaderCellDef> Driver Id </th>
+        <td mat-cell class="w-cell" *matCellDef="let element"> {{element.driverId}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="tractorPlate">
+        <th mat-header-cell class="w-header" *matHeaderCellDef> Tractor Plate </th>
+        <td mat-cell class="w-cell" *matCellDef="let element"> {{element.tractorPlate}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="tractorId">
+        <th mat-header-cell class="w-header" *matHeaderCellDef> Tractor Id </th>
+        <td mat-cell class="w-cell" *matCellDef="let element"> {{element.tractorId}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="semiFirstPlate">
+        <th mat-header-cell class="w-header" *matHeaderCellDef> Semi First Plate </th>
+        <td mat-cell class="w-cell" *matCellDef="let element"> {{element.semiFirstPlate}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="semiFirstId">
+        <th mat-header-cell class="w-header" *matHeaderCellDef> Semi First Id </th>
+        <td mat-cell class="w-cell" *matCellDef="let element"> {{element.semiFirstId}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="semiSecondPlate">
+        <th mat-header-cell class="w-header" *matHeaderCellDef> Semi Second Plate </th>
+        <td mat-cell class="w-cell" *matCellDef="let element"> {{element.semiSecondPlate}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="semiSecondId">
+        <th mat-header-cell class="w-header" *matHeaderCellDef> Semi Second Id </th>
+        <td mat-cell class="w-cell" *matCellDef="let element"> {{element.semiSecondId}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="percentageCompleted">
+        <th mat-header-cell class="w-header" *matHeaderCellDef> Percentage Completed </th>
+        <td mat-cell class="w-cell" *matCellDef="let element"> {{element.percentageCompleted}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="originDescription">
+        <th mat-header-cell class="w-header" *matHeaderCellDef> Origin Description </th>
+        <td mat-cell class="w-cell" *matCellDef="let element"> {{element.originDescription}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="lastMilestoneDescription">
+        <th mat-header-cell class="w-header" *matHeaderCellDef> Last Milestone Description </th>
+        <td mat-cell class="w-cell" *matCellDef="let element"> {{element.lastMilestoneDescription}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="delayed">
+        <th mat-header-cell class="w-header" *matHeaderCellDef> Delayed </th>
+        <td mat-cell class="w-cell" *matCellDef="let element"> {{element.delayed}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="latitude">
+        <th mat-header-cell class="w-header" *matHeaderCellDef> Latitude </th>
+        <td mat-cell class="w-cell" *matCellDef="let element"> {{element.latitude}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="longitude">
+        <th mat-header-cell class="w-header" *matHeaderCellDef> Longitude </th>
+        <td mat-cell class="w-cell" class="w-cell" *matCellDef="let element"> {{element.longitude}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="start">
+        <th mat-header-cell class="w-header" *matHeaderCellDef> Start </th>
+        <td mat-cell class="w-cell" *matCellDef="let element"> {{element.start}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="externalCode">
+        <th mat-header-cell class="w-header" *matHeaderCellDef> External Code </th>
+        <td mat-cell class="w-cell" *matCellDef="let element"> {{element.externalCode}} </td>
+      </ng-container>
+
+        <ng-container matColumnDef="dateCreated">
+        <th mat-header-cell class="w-header" *matHeaderCellDef> Date Created </th>
+        <td mat-cell class="w-cell" *matCellDef="let element"> {{element.dateCreated}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <mat-paginator [length]="pageLength" [pageSize]="15" showFirstLastButtons></mat-paginator>
+</div>

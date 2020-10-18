@@ -1,0 +1,17 @@
+.summary {
+    h2 {
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    .summary-table {
+        margin: 30px;
+       .w-header, .w-cell{
+            flex: 0 0 auto;
+            white-space: nowrap;
+            padding: 0 15px;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+<div class="main-container">
+    <div class="login-container">
+        <h2 class="login-header">Oxirium</h2>
+        <form class="login-content" [formGroup]="loginForm">
+            <div>
+                <mat-form-field appearance="outline">
+                    <mat-label>Username</mat-label>
+                    <input matInput placeholder="" formControlName="user">
+                    <mat-error *ngIf="formControls.user.errors">
+                    <span *ngIf="formControls.user.errors?.required"> You must enter the username</span>
+                    </mat-error>      
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="outline">
+                  <mat-label>Password</mat-label>
+                  <input matInput placeholder="" [type]="!hide ? 'password' : 'text'" formControlName="password">
+                  <mat-icon matSuffix (click)="hide = !hide">{{!hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                  <mat-error *ngIf="formControls.password.errors">
+                    <span *ngIf="formControls.password.errors?.required">Password is required</span>
+                  </mat-error>
+                </mat-form-field>
+              </div>
+            <div>
+                <button mat-flat-button color="primary" (click)="signIn()">Log In</button>
+            </div>
+        </form>
+    </div>
+</div>
