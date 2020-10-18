@@ -1,5 +1,9 @@
 <div class="summary">
-  <h2>Company Information</h2>
+  <div>
+    <h2>Company Information</h2>
+    <button mat-flat-button color="primary" (click)="logOut()">Log Out</button>
+  </div>
+  
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 summary-table">
     
       <ng-container matColumnDef="id">

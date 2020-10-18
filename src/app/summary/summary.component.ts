@@ -37,4 +37,8 @@ export class SummaryComponent implements OnInit, AfterViewInit {
       this.dataSource.data = data as ResponseSummaryData[];
     });
   }
+
+  logOut() {
+    this.authService.doLogout();
+  }
 }
